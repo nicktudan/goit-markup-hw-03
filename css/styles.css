@@ -1,0 +1,217 @@
+/*Основний колір тексту #212121
+Другорядний колір тексту #757575
+Акцент #2196F3
+Лого основний колір #2196F3
+Лого Шапка #000000
+Лого Футер #FFFFFF
+Другорядний світлий колір тексту #FFFFFF
+Другорядний світлий колір тексту + прозорість rgba(255, 255, 255, 0.6)
+Фон основний колір #FFFFFF
+Фон темний колір #2F303A
+Фон світлий колір #F5F4FA
+Колір рамки #ECECEC;
+Активна кнопка #188CE8
+Основний шрифт тексту Roboto, sans-serif;
+Шрифт логотипу Raleway, sans-serif; */
+
+:root {
+    --pimary-text-color: #212121;
+    --secondary-text-color: #757575;
+    --accent-color: #2196F3;
+    --primary-logo-color: #2196F3;
+    --header-logo-color: #000000;
+    --footer-logo-color: #FFFFFF;
+    --primary-light-text-color: #FFFFFF;
+    --secondary-light-text-color: rgba(255, 255, 255, 0.6);
+    --pimary-bg-color: #FFFFFF;
+    --dark-bg-color: #2F303A;
+    --light-bg-color: #F5F4FA;
+    --border-color: #ECECEC;
+    --accent-btn: #188CE8;
+    --pimary-font-text: Roboto, sans-serif;
+    --font-logo: Raleway, sans-serif;
+}
+
+body {
+    font-family: var(--pimary-font-text);
+    letter-spacing: 0.03em;
+
+    color: var(--pimary-text-color);
+    background-color: var(--pimary-bg-color);
+}
+
+.list {list-style: none;}
+
+/* Щформлення Лого */
+.logo-dark {color: var(--header-logo-color);}
+
+.logo-light {color: var(--footer-logo-color);}
+
+.logo {
+    font-family: var(--font-logo);
+    font-size: 26px;
+    color: var(--primary-logo-color);
+    text-decoration: none;
+}
+
+.logo,
+.service-btn {font-weight: 700;}
+
+/* Оформлення Лого і Команди */
+.logo,
+.team-title,
+.team-post  {
+    line-height: 1.19;
+}
+
+/* Щформлення Навігації і елементів Особливості */
+.site-nav .link,
+.contacts .link,
+.feature-title {
+    font-size: 14px;
+    line-height: 1.14;
+}
+
+.site-nav .link,
+.contacts .link {
+    letter-spacing: 0.02em;
+    text-decoration: none;
+}
+
+/* Оформлення Контактів, Чим займаємось, Команди, Адреси і Портфоліо */
+.site-nav .link {color: inherit;}
+
+.contacts .link,
+.about-feature,
+.team-post,
+.address,
+.portfolio-post {
+    color: var(--secondary-text-color);
+}
+
+/* Оформлення фону Послуга і Підвал */
+.service,
+.page-footer {
+    background-color: var(--dark-bg-color);
+}
+
+/* Оформлення кольору тексту Послуга і Підвал */
+.service,
+.service-btn,
+.address-list .address-link .link {
+    color: var(--primary-light-text-color);
+}
+
+/* Оформлення секції Послуга і елементів Портфоліо */
+.service-title,
+.service-btn,
+.portfolio-title  {
+    letter-spacing: 0.06em;
+}
+
+.service-title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.service-btn {
+    font-family: inherit;
+    background-color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.service-btn,
+.portfolio-post {
+    line-height: 1.88;
+}
+
+.service-btn:hover,
+.service-btn:focus {
+    background-color: var(--accent-btn);
+}
+
+.section-title {
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+}
+
+/* Офщрмлення тексту Особливості і Підвал */
+.about-feature,
+.address {
+    font-size: 14px;
+    line-height: 1.71;
+}
+
+/* Оформлення Команди */
+.team-section {background-color: var(--light-bg-color);}
+
+.team-item {
+    width: 270px;
+    height: 368px;
+    left: 215px;
+    background-color: var(--pimary-bg-color);
+}
+
+/* Оформлення Кнопки, Команди і Портфоліо */
+.service-btn,
+.team-title,
+.team-post, 
+.portfolio-btn {
+    font-size: 16px;
+    text-align: center;
+}
+
+.site-nav .link,
+.contacts .link,
+.team-title,
+.portfolio-btn {
+    font-weight: 500;
+}
+    
+/* Підвал */
+.address {font-style: normal;}
+
+.address-list .link {
+    color: var(--secondary-light-text-color);
+    text-decoration: none;
+} 
+
+/* Оформлення Ховеру і Фокусу */
+.site-nav .link:hover,
+.contacts .link:hover,
+.site-nav .link:focus,
+.contacts .link:focus,
+.link.current,
+.address-list .link:hover,
+.address-list .link:focus {
+    color: var(--accent-color);
+} 
+
+/* Портфоліо */
+.portfolio-btn {
+    font-family: inherit;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+    background-color: var(--light-bg-color);
+    cursor: pointer;
+}
+
+.portfolio-btn:hover,
+.portfolio-btn:focus {
+    color: var(--primary-light-text-color);
+    background-color: var(--accent-color);
+}
+
+.portfolio-link {text-decoration: none;}
+
+.portfolio-title {
+    font-size: 18px;
+    line-height: 2;
+    color: var(--pimary-text-color); 
+}
