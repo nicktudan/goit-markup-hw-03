@@ -9,7 +9,8 @@
 Фон основний колір #FFFFFF
 Фон темний колір #2F303A
 Фон світлий колір #F5F4FA
-Колір рамки #ECECEC;
+Колір рамки шапки #ECECEC;
+Колір рамки карток портфоліо #EEEEEE;
 Активна кнопка #188CE8
 Перша тінь команди rgba(0, 0, 0, 0.12);
 Друга тінь команди rgba(0, 0, 0, 0.14);
@@ -29,7 +30,8 @@
     --pimary-bg-color: #FFFFFF;
     --dark-bg-color: #2F303A;
     --light-bg-color: #F5F4FA;
-    --border-color: #ECECEC;
+    --header-border-color: #ECECEC;
+    --card-border-color: #EEEEEE;
     --accent-btn: #188CE8;
     --first-team-shadow: rgba(0, 0, 0, 0.12);
     --second-team-shadow: rgba(0, 0, 0, 0.14);
@@ -62,11 +64,12 @@ body {
     background-color: var(--pimary-bg-color);
 }
 
-img {display: block;}
+img {
+    display: block;
+    min-width: 100%;
+}
 
-header {
-    border-bottom: 1px solid var(--border-color);
-} 
+header {border-bottom: 1px solid var(--header-border-color);} 
 
 .visually-hidden {
     position: absolute;
@@ -109,7 +112,7 @@ header {
 
 .site-nav {
     display: flex;
-    margin-left: 80px;
+    margin-left: 93px;
     column-gap: 50px;
 }
 
@@ -143,7 +146,9 @@ header {
 }
 
 .logo,
-.service-btn {font-weight: 700;}
+.service-btn {
+    font-weight: 700;
+}
 
 /* Оформлення Лого і Команди */
 .logo,
@@ -198,19 +203,19 @@ header {
 }
 
 .service-title {
-    margin-bottom: 30px;
-
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center; 
+    text-align: center;
     text-transform: uppercase;
 }
 
 .service-btn {
-    background-color: var(--accent-color);
     display: flex;
     align-items: center;
+    margin-top: 30px;
+
+    background-color: var(--accent-color);
     cursor: pointer;
 }
 
@@ -262,6 +267,7 @@ header {
     flex-basis: calc((100% - 90px) / 4);
 
     background-color: var(--pimary-bg-color);
+
     box-shadow: 0px 1px 3px var(--first-team-shadow), 0px 1px 1px var(--second-team-shadow), 0px 2px 1px var(--third-team-shadow);
     border-radius: 0px 0px 4px 4px;
 }
@@ -283,9 +289,7 @@ header {
 
 .work-item {flex-basis: calc((100% - 60px) / 3);}
 
-.work {
-    padding-top: 0px;
-}
+.work {padding-top: 0px;}
 
 /* Оформлення Кнопки, Команди і Портфоліо */
 .service-btn,
@@ -306,21 +310,26 @@ header {
 /* Підвал */
 .footer-container {
     padding-top: 60px;
-    padding-bottom: 60px; 
+    padding-bottom: 60px;
 }
 
 .address {
+    display: flex;
+    flex-direction: column;
     margin-top: 20px;
     font-style: normal;
+}
+
+.address-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 231px;
+    gap: 9px;
 }
 
 .address-list .link {
     color: var(--secondary-light-text-color);
     text-decoration: none;
-}
-
-.address-item {
-    margin-top: 9px;
 }
 
 /* Оформлення Ховеру і Фокусу */
@@ -335,11 +344,20 @@ header {
 } 
 
 /* Портфоліо */
+.portfolio-btn-list {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+    column-gap: 8px;
+}
+
 .portfolio-btn {
+    padding: 6px 22px;
     line-height: 1.62;
     letter-spacing: 0.03em;
     background-color: var(--light-bg-color);
     cursor: pointer;
+    border-radius: 4px;
 }
 
 .portfolio-btn:hover,
@@ -354,12 +372,19 @@ header {
     gap: 30px;
 }
 
-.portfolio-item {
-    flex-basis: calc((100% - 180px) / 9);}
+.portfolio-item {flex-basis: calc((100% - 180px) / 9);}
+
+.portfolio-card-content {
+    padding: 20px 24px;
+    border-right: 1px solid var(--card-border-color); 
+    border-bottom: 1px solid var(--card-border-color);
+    border-left: 1px solid var(--card-border-color);
+}
 
 .portfolio-link {text-decoration: none;}
 
 .portfolio-title {
+    margin-bottom: 4px;
     font-size: 18px;
     line-height: 2;
     color: var(--pimary-text-color); 
