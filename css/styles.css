@@ -282,12 +282,14 @@ header {border-bottom: 1px solid var(--header-border-color);}
     border-radius: 0px 0px 4px 4px;
 }
 
-.team-title {
-    margin-top: 30px;
-    margin-bottom: 10px;
+.team-card-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
-.team-post {margin-bottom: 30px;}
+.team-title {
+    margin-bottom: 10px;
+}
 
 /* Оформлення Чим ми займаємося */
 
